@@ -42,11 +42,20 @@ live sliders for on-the-spot tuning rather than fixed constants.
 
 ## Running it
 
+### Option A: install the .exe (no Python needed)
+
+Download [`dist/HapticDrive.exe`](dist/HapticDrive.exe) from this repo and
+double-click it. Windows SmartScreen may warn about it being an
+unrecognized app since it isn't code-signed — click **More info** →
+**Run anyway**.
+
+### Option B: run from source
+
 ```
 py haptic_drive.py
 ```
 
-Click into the window so it has keyboard focus, then hold WASD.
+Either way, click into the window so it has keyboard focus, then hold WASD.
 
 ## Controls
 
