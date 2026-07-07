@@ -52,7 +52,7 @@ import time
 import tkinter as tk
 from tkinter import ttk
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+SCRIPT_DIR = getattr(sys, "_MEIPASS", os.path.dirname(os.path.abspath(__file__)))
 ORIENTATION_IMAGE_PATH = os.path.join(SCRIPT_DIR, "controller_orientation.png")
 
 # ---------------------------------------------------------------------------
