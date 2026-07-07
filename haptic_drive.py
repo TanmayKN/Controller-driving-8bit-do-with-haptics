@@ -12,20 +12,23 @@ speed of the controller's two rumble motors independently:
     - Right motor = high-frequency / weak "buzzy" motor
 
 Spinning the motors makes the controller vibrate. Because the two motors
-sit on opposite sides of an asymmetric plastic shell, vibrating them
-unevenly makes the whole controller creep/rotate across a hard floor
-(the same trick "bristlebot" toys use). This app turns WASD into motor
-patterns so you can crudely "drive" it:
+sit on opposite sides of an asymmetric plastic shell, running just one of
+them makes the whole controller pivot, and running both makes it creep
+forward (the same trick "bristlebot" toys use). This app turns WASD into
+motor commands so you can crudely "drive" it:
 
-    W - both motors, steady pulse   -> creeps forward
-    S - both motors, fast stutter   -> different gait, tends to creep the
-                                        other way (true reverse isn't
-                                        possible with ERM motors, so this
-                                        is experimental - tune the pulse
-                                        rate/intensity for your floor)
-    A - left motor only             -> pivots/curves left
-    D - right motor only            -> pivots/curves right
-    W+A / W+D                       -> forward with a turning bias
+    W - both motors, full steady    -> creeps forward
+    A - right motor only, full      -> turns left
+    D - left motor only, full       -> turns right
+    S - "smart straight": left motor full, right motor held at whatever
+                                        the manual strength slider is set
+                                        to (the right motor runs slightly
+                                        stronger than the left on this
+                                        hardware, so throttling it back
+                                        balances the two sides out)
+
+There's also a manual-control panel with independent strength/frequency
+sliders per motor for experimenting directly, bypassing WASD entirely.
 
 No physical movement is guaranteed - it depends on your floor surface,
 the controller's weight balance, and motor intensity. Use the sliders to
